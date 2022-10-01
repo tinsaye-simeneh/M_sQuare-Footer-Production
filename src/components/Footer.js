@@ -1,8 +1,27 @@
-import React from 'react';
+import React from "react";
+import uixLogo from 
 
-const Footer = () => {  
-    return (
-        <div  className="footer">
+const Footer = () => {
+  return (
+    <div className="container">
+      <div className="row">
+        <div className="footer mt-5">
+          <div className="col-md-12 text-center">
+            <p
+              className="text-dark"
+              style={{ fontSize: "30px", fontWeight: "bold" }}
+            >
+              M sQuare Footer Component-1
+            </p>
+            <p
+              style={{ color: "#FF9900", fontSize: "30px", fontWeight: "bold" }}
+            >
+              Desktop Size
+            </p>
+          </div>
+        </div>
+      </div>
+      <div  className="footer">
             <div className="container">
                 <div className="row">
                     <div className="col-4 col-sm-2 offset-1">
@@ -38,14 +57,18 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row justify-content-center">
-                    <div className="col-auto">
-                        <p>© 2020 Ristorante Con Fusion. All Rights Reserved.</p>
+                <div className="row">
+                    <div className="col-md-4">
+                        <p>© 2022 M sQuare. All Rights Reserved.</p>
+                    </div>
+                    <div className="col-md-6">
+                        <p>Proudly Powered By <img src= </p>
                     </div>
                 </div>
             </div>
         </div>
-    );
-    }
+      </div>
+  );
+};
 
-    export default Footer;
+export default Footer;
