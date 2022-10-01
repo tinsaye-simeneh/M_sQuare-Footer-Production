@@ -39,8 +39,10 @@ const Footer = () => {
               M sQuare Footer Component-1
             </p>
             <p
+            id="MainText"
               style={{ color: "#FF9900", fontSize: "30px", fontWeight: "bold" }}
             >
+                
               Desktop Size
             </p>
           </div>
