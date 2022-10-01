@@ -1,9 +1,33 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import uixLogo from "../assets/images/uix.png";
 import Reaclate from "../assets/images/reaclate.png";
+import { Collapse } from "bootstrap";
 import "./style/Footer.css";
 
 const Footer = () => {
+if (window.innerWidth < 768) {
+    var toggleState = false;
+}
+ else{
+    toggleState = true;
+}   
+    var [qltoggle, setQltoggle] = useState(toggleState);
+    var [ostoggle, setOstoggle] = useState(toggleState);
+    var [ptoggle, setPtoggle] = useState(toggleState);
+    useEffect(() => {
+        var qlCollapse = document.getElementById('collapseTargetql')
+        var bsCollapse = new Collapse(qlCollapse, {toggle: false})
+        qltoggle ? bsCollapse.show() : bsCollapse.hide()
+
+        var osCollapse = document.getElementById('collapseTargetos')
+        var bsCollapse = new Collapse(osCollapse, {toggle: false})
+        ostoggle ? bsCollapse.show() : bsCollapse.hide()
+
+        var pCollapse = document.getElementById('collapseTargetp')
+        var bsCollapse = new Collapse(pCollapse, {toggle: false})
+        ptoggle ? bsCollapse.show() : bsCollapse.hide()
+    })
+
   return (
     <div className="container">
       <div className="row">
@@ -26,7 +50,11 @@ const Footer = () => {
       <div className="footer bg-dark text-white p-3 mt-5">
         <div className="row">
           <div className="col-md-2 col-sm-2 text-center">
-            <h4>Quick Links</h4>
+          <button className="btn bg-dark border-0 text-white" onClick={() => setQltoggle(qltoggle => !qltoggle)}>
+              <h4>  Quick Links </h4>
+            </button>
+
+            <div className="collapse" id="collapseTargetql">
             <ul className="list-unstyled">
               <li>
                 <a href="#Home">Home</a>
@@ -41,9 +69,14 @@ const Footer = () => {
                 <a href="#Contact">Contact</a>
               </li>
             </ul>
+            </div>
           </div>
           <div className="col-md-3 col-sm-5 text-center">
-            <h4>Our Services</h4>
+          <button className="btn bg-dark border-0 text-white" onClick={() => setOstoggle(ostoggle => !ostoggle)}>
+              <h4>  Our Services </h4>
+            </button>
+
+            <div className="collapse" id="collapseTargetos">
             <ul className="list-unstyled">
               <li>
                 <a href="#RealTime">Real Time Messaging</a>
@@ -63,21 +96,27 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+            </div>
           </div>
 
           <div className="col-md-3 col-sm-5 text-center">
-            <h4>Products</h4>
-            <ul className="list-unstyled">
-              <li>
-                <a href="#RealTime">Android App</a>
-              </li>
-              <li>
-                <a href="#Unlimited">Ios App</a>
-              </li>
-              <li>
-                <a href="#3accounts">Web Version</a>
-              </li>
-            </ul>
+          <button className="btn bg-dark border-0 text-white" onClick={() => setPtoggle(ptoggle => !ptoggle)}>
+              <h4>  Products </h4>
+            </button>
+
+            <div className="collapse" id="collapseTargetp">
+              <ul className="list-unstyled">
+                <li>
+                  <a href="#RealTime">Android App</a>
+                </li>
+                <li>
+                  <a href="#Unlimited">Ios App</a>
+                </li>
+                <li>
+                  <a href="#3accounts">Web Version</a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div className="col-md-4 col-sm-5 text-center">
