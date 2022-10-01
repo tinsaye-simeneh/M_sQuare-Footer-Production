@@ -1,5 +1,7 @@
 import React from "react";
-import uixLogo from 
+import uixLogo from "../assets/images/uix.png";
+import Reaclate from '../assets/images/reaclate'
+import "./style/Footer.css";
 
 const Footer = () => {
   return (
@@ -21,53 +23,103 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div  className="footer">
-            <div className="container">
-                <div className="row">
-                    <div className="col-4 col-sm-2 offset-1">
-                        <h5>Links</h5>
-                        <ul className="list-unstyled">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Menu</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div className="col-6 col-sm-5 text-center">
-                        <h5>Our Address</h5>
-                        <address>
-                        121, Clear Water Bay Road<br />
-                        Clear Water Bay, Kowloon<br />
-                        HONG KONG<br />
-                        <i className="fa fa-phone fa-lg"></i>: +852 1234 5678<br />
-                        <i className="fa fa-fax fa-lg"></i>: +852 8765 4321<br />
-                        <i className="fa fa-envelope fa-lg"></i>: <a href="mailto: 
-                        ">
-                            </a>
-                        </address>
-                    </div>
-                    <div className="col-12 col-sm-4 align-self-center">
-                        <div className="text-center">
-                            <a className="btn btn-social-icon btn-google" href="http://google.com/+"><i className="fa fa-google-plus"></i></a>
-                            <a className="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i className="fa fa-facebook"></i></a>
-                            <a className="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i className="fa fa-linkedin"></i></a>
-                            <a className="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i className="fa fa-twitter"></i></a>
-                            <a className="btn btn-social-icon btn-google" href="http://youtube.com/"><i className="fa fa-youtube"></i></a>
-                            <a className="btn btn-social-icon" href="mailto:"><i className="fa fa-envelope-o"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-4">
-                        <p>© 2022 M sQuare. All Rights Reserved.</p>
-                    </div>
-                    <div className="col-md-6">
-                        <p>Proudly Powered By <img src= </p>
-                    </div>
-                </div>
-            </div>
+      <div className="footer bg-dark text-white p-3">
+        <div className="row">
+          <div className="col-md-3 col-sm-2 text-center">
+            <h4>Quick Links</h4>
+            <ul className="list-unstyled">
+              <li>
+                <a href="#Home">Home</a>
+              </li>
+              <li>
+                <a href="#About">About</a>
+              </li>
+              <li>
+                <a href="#Account">Account</a>
+              </li>
+              <li>
+                <a href="#Contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div className="col-md-3 col-sm-5 text-center">
+            <h4>Our Services</h4>
+            <ul className="list-unstyled">
+              <li>
+                <a href="#RealTime">Real Time Messaging</a>
+              </li>
+              <li>
+                <a href="#Unlimited">Unlimited Groups</a>
+              </li>
+              <li>
+                <a href="#3accounts">3+ Accounts In one Device</a>
+              </li>
+              <li>
+                <a
+                  href="#LearnMore"
+                  className="text-primary text-decoration-none"
+                >
+                  Learn More
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-md-3 col-sm-5 text-center">
+            <h4>Products</h4>
+            <ul className="list-unstyled">
+              <li>
+                <a href="#RealTime">Android App</a>
+              </li>
+              <li>
+                <a href="#Unlimited">Ios App</a>
+              </li>
+              <li>
+                <a href="#3accounts">Web Version</a>
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <div className="row">
+          <div className="col-md-4">
+            <p>© 2022 M sQuare. All Rights Reserved.</p>
+          </div>
+          <div className="col-md-6">
+            <p>
+              Proudly Powered By <img src={uixLogo} alt="uix Nature logo" /> and <img src={reactlate{" "}
+            </p>
+          </div>
+          <div className="col-md-2 col-sm-4">
+              <a
+                className="btn btn-social-icon btn-linkedin text-white"
+                href="http://www.linkedin.com/in/"
+              >
+                <i className="fa fa-linkedin"></i>
+              </a>
+              <a
+                className="btn btn-social-icon btn-linkedin text-white"
+                href="http://www.linkedin.com/in/"
+              >
+                <i className="fa fa-linkedin"></i>
+              </a>
+              <a
+                className="btn btn-social-icon btn-linkedin text-white"
+                href="http://www.linkedin.com/in/"
+              >
+                <i className="fa fa-linkedin"></i>
+              </a>
+              <a
+                className="btn btn-social-icon btn-linkedin text-white"
+                href="http://www.linkedin.com/in/"
+              >
+                <i className="fa fa-linkedin"></i>
+              </a>
+          </div>
+        </div>
+
       </div>
+    </div>
   );
 };
 
