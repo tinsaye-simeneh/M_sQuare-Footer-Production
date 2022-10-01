@@ -107,15 +107,17 @@ const Footer = () => {
           </div>
           <div className="col-md-6">
             <p>
-              Proudly Powered By <a href="https://t.me/uixnature">
-              <img src={uixLogo} alt="uix Nature logo" className="mb-2 pe-1" /> </a>
+              Proudly Powered By{" "}
+              <a href="https://t.me/uixnature">
+                <img
+                  src={uixLogo}
+                  alt="uix Nature logo"
+                  className="mb-2 pe-1"
+                />{" "}
+              </a>
               <span> and </span>
               <a href="https://github.com/Reaclate">
-              <img
-                src={Reaclate}
-                alt="reaclate logo"
-                className="mb-2 ps-1"
-              />
+                <img src={Reaclate} alt="reaclate logo" className="mb-2 ps-1" />
               </a>
             </p>
           </div>
